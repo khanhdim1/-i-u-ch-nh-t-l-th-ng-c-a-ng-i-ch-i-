@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hacker Style - Chỉnh Tỉ Lệ Thắng có bảo vệ</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="flicker">⚡ Terminal Win Rate Control ⚡</h1>
+
+    <!-- Login Admin -->
+    <section class="terminal-box" id="login-section">
+      <h2>Admin Login</h2>
+      <p><span class="prompt">&gt;</span> Mật khẩu Admin: 
+        <input type="password" id="admin-password" autocomplete="off" />
+        <button id="login-btn">Đăng nhập</button>
+      </p>
+      <p id="login-msg" class="status"></p>
+    </section>
+
+    <!-- Admin control panel, ẩn mặc định -->
+    <section class="terminal-box hidden" id="admin-section">
+      <h2>Admin Khánh Control Panel</h2>
+      <p><span class="prompt">&gt;</span> Nhập tỉ lệ thắng (0-100): 
+        <input type="number" id="win-rate" min="0" max="100" value="50" autocomplete="off" />
+        <button id="set-rate-btn">Set</button>
+      </p>
+      <p class="status">Tỉ lệ thắng hiện tại: <span id="current-rate">50%</span></p>
+      <button id="logout-btn" class="logout-btn">⏻ Đăng xuất Admin</button>
+    </section>
+
+    <section class="terminal-box" id="player-section">
+      <h2>Player Console</h2>
+      <p><span class="prompt">&gt;</span> <button id="play-btn">▶ Chơi Ngay</button></p>
+      <p id="result" class="result"></p>
+      
+      <h3>Lịch sử chơi (mới nhất trên cùng):</h3>
+      <div id="log-history" class="log-history"></div>
+    </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
